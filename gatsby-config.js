@@ -4,7 +4,7 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    siteTitleAlt: `Aniket Narayan, Blog | Portfolio`,
   },
   plugins: [
     {
@@ -23,12 +23,16 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `Medium`,
+            url: `https://medium.com/@aniketnarayan`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `LinkedIn`,
+            url: `https://in.linkedin.com/in/aniket-narayan-145478138`,
+          },
+          {
+            name: `GitHub`,
+            url: `https://github.com/mrgooglr`,
           },
         ],
       },
@@ -43,9 +47,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
+        name: `Aniket Narayan, Blog | Portfolio`,
+        short_name: `blog_portfolio`,
+        description: `A minimal portfolio and blog site for my personal use and serves as showcase to my projects and resume in this digital playground.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
