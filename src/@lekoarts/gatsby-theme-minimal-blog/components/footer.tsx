@@ -29,13 +29,13 @@ const Footer = () => {
       </div>
       <div>
         <Link
-          aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
+          aria-label="Link to the GitHub repository"
+          href="https://github.com/MrGooglr/min-blog-port"
         >
-          Created with
+          Created
         </Link>
         {` `}
-         &#128151; by
+          with &#128151; by
         {` `}
           Aniket Narayan
       </div>
