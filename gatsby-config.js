@@ -10,7 +10,7 @@ module.exports = {
     siteUrl: `https://aniketis.online`,
     siteDescription: `A minimal portfolio and blog site for my personal use and serves as showcase to my projects and resume in this digital playground.`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner.png`,
     author: `@mrgooglr`,
   },
   plugins: [
