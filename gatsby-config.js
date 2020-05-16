@@ -4,7 +4,14 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
+    siteTitle: `Aniket Narayan`,
     siteTitleAlt: `Aniket Narayan, Blog | Portfolio`,
+    siteHeadline: `Aniket Narayn - Personal Blog, Portfolio`,
+    siteUrl: `https://aniketis.online`,
+    siteDescription: `A minimal portfolio and blog site for my personal use and serves as showcase to my projects and resume in this digital playground.`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@mrgooglr`,
   },
   plugins: [
     {

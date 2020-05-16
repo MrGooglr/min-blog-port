@@ -26,6 +26,7 @@ const Footer = () => {
           href="https://reactjs.org/">
           ReactJS
         </Link>
+         {` `}| JAM Stack
       </div>
       <div>
         <Link
@@ -35,7 +36,7 @@ const Footer = () => {
           Created
         </Link>
         {` `}
-          with &#128151; by
+          with &#10084; by
         {` `}
           Aniket Narayan
       </div>
