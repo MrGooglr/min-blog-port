@@ -63,13 +63,13 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
+            src: `/favicon-196x196.png`,
+            sizes: `196x196`,
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
+            src: `/favicon-196x196.png`,
+            sizes: `196x196`,
             type: `image/png`,
           },
         ],
@@ -77,5 +77,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-theme-ui`,
   ],
 }

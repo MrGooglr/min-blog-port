@@ -9,6 +9,7 @@ const Footer = () => {
     <footer
       sx={{
         boxSizing: `border-box`,
+        fontSize:`0.9rem`,
         display: `flex`,
         justifyContent: `space-between`,
         mt: [6],
@@ -26,7 +27,7 @@ const Footer = () => {
           href="https://reactjs.org/">
           ReactJS
         </Link>
-         {` `}| JAM Stack
+         {` `}| JAMStack
       </div>
       <div>
         <Link
