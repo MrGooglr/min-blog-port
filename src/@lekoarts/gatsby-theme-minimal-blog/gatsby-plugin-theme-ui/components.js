@@ -1,4 +1,5 @@
 /* eslint react/prop-types: 0 */
+/* eslint react/prop-types: 0 */
 import React from "react"
 import { preToCodeBlock } from "mdx-utils"
 import { Text } from "@theme-ui/components"
