@@ -27,7 +27,7 @@ const Footer = () => {
           href="https://reactjs.org/">
           ReactJS
         </Link>
-         {` `}| JAMStack <span style={{ fontSize:0.6+'rem' }}>&nbsp;| 
+         {` `}| JAMStack <span style={{ fontSize:0.6+'rem' }}>&nbsp;| &nbsp;
          <Link
           aria-label="Link to the GitHub repository"
           href="https://github.com/MrGooglr/min-blog-port"
