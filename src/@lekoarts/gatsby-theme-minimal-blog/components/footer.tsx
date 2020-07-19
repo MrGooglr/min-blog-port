@@ -27,12 +27,12 @@ const Footer = () => {
           href="https://reactjs.org/">
           ReactJS
         </Link>
-         {` `}| JAMStack<span style={{ fontSize:0.6+'rem' }}> 
+         {` `}| JAMStack <span style={{ fontSize:0.6+'rem' }}>&nbsp;| 
          <Link
           aria-label="Link to the GitHub repository"
           href="https://github.com/MrGooglr/min-blog-port"
         >
-          &nbsp;| Last Edit: 19 July 2020
+            Last Edit: 19 July 2020
         </Link>
          </span>
       </div>
