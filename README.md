@@ -4,7 +4,7 @@
   </a>
 </h1>
 <h3 align="center">
-  Bootstraped using : <a href="https://minimal-blog.lekoarts.de">Gatsby Starter: Minimal Blog</a>
+  Bootstrapped using : <a href="https://minimal-blog.lekoarts.de">Gatsby Starter: Minimal Blog</a>
 </h3>
 
 
