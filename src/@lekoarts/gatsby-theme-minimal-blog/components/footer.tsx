@@ -27,19 +27,26 @@ const Footer = () => {
           href="https://reactjs.org/">
           ReactJS
         </Link>
-         {` `}| JAMStack
-      </div>
-      <div>
-        <Link
+         {` `}| JAMStack<span style={{ fontSize:0.6+'rem' }}> 
+         <Link
           aria-label="Link to the GitHub repository"
           href="https://github.com/MrGooglr/min-blog-port"
         >
-          Created
+          &nbsp;| Last Edit: 19 July 2020
         </Link>
+         </span>
+      </div>
+      <div>
+          Created
         {` `}
           with &#10084; by
         {` `}
+        <Link
+          aria-label="Link to the GitHub repository"
+          href="https://github.com/MrGooglr/"
+        >
           Aniket Narayan
+          </Link>
       </div>
     </footer>
   )
