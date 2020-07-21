@@ -15,6 +15,7 @@
 	-webkit-animation-timing-function:ease-in-out;
 	-webkit-animation-direction: alternate;
 	animation-name: blinker;
+	/*color:rgb(51, 204, 255);*/
 	animation-duration: 0.6s;
 	animation-iteration-count:infinite;
 	animation-timing-function:ease-in-out;

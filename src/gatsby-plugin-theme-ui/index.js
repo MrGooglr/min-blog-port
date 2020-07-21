@@ -5,19 +5,19 @@ const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    primary: tailwind.colors.purple[7],
+    primary: `#1a73e8`,
     secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
-    heading: tailwind.colors.black,
+    heading: tailwind.colors.gray[10],
     divide: tailwind.colors.gray[3],
     modes: {
       dark: {
         text: tailwind.colors.gray[4],
-        primary: tailwind.colors.purple[5],
+        primary: `rgb(51, 204, 255)`,
         secondary: `#7f8ea3`,
         toggleIcon: tailwind.colors.gray[4],
         background: `#11141c`,
-        heading: tailwind.colors.white,
+        heading: tailwind.colors.white[8],
         divide: tailwind.colors.gray[8],
         muted: tailwind.colors.gray[8],
       },
