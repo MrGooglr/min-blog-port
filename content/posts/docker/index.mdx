@@ -1,5 +1,5 @@
 ---
-title: Intoduction to Docker and Basic commands.
+title: Introduction to Docker and Basic commands.
 date: 2022-07-25
 slug: "/intro-docker"
 tags:
@@ -11,6 +11,13 @@ banner: ./docker.jpg
 ---
 
 Docker is an open-source project for automating the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises.
+
+
+Installation :
+
+RHEL/CentOS or Linux -> We have Docker Engine [download for CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
+
+MacOS/Windows -> We have Docker Desktop
 
 > to run docker container from image [the image can be available in hub or from seperate developer]
 
@@ -57,13 +64,6 @@ docker rm $(docker ps -aq)
 ```bash
 docker exec -it name-of-the-container bash
 ```
-
-Installation :
-
-RHEL/CentOS or Linux -> We have Docker Engine [download for CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
-
-MacOS/Windows -> We have Docker Desktop
-
 
 > Sharing data [volume] between two containers : this will create exact replica of volumne from one container to the new one
 
@@ -129,3 +129,4 @@ docker run --name website -d -p 8080:80 website:latest
 > go to localhost:8080 [or url:8080] to see the website up and running.
  Any number of containers can be created using that image
  
+Now we are going to create an API and make things a little bit complax.
