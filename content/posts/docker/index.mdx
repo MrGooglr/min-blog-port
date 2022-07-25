@@ -1,0 +1,65 @@
+---
+title: Intoduction to Docker and Basic commands.
+date: 2022-07-25
+slug: "/intro-docker"
+tags:
+  - Docker
+  - Docker-cli
+  - aws
+  - cloud
+banner: ./docker.jpg
+---
+
+Docker is an open-source project for automating the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises.
+
+> to run docker container from image [the image can be available in hub or from seperate developer]
+
+```bash
+docker run --name name-of-the-container -v host-volume-path:path-to-container-volume -d -p 8080:80 name-of-the-image-to-run
+```
+
+Explaination :
+
+1. ```docker run``` is used to run an image on a container.
+1. ```--name``` flag is used to name the container
+1. ```-v``` flag is used to mount a host volume to docker volume ```hostVolume:dockerVolume```
+1. ```-d``` is for detached mode to run container
+1. ```-p``` is used to bind host port to open continer port for the image ```hostPort:containerPort```
+
+Example : if run on same folder location as the file present we can use $(pwd)
+
+```bash
+docker run --name website -v $(pwd):/usr/share/nginx/html -d -p 8080:80 nginx
+```
+
+Other useful commands :
+
+> to see all containers available
+
+```bash
+docker ps -a
+```
+
+> to start/stop container
+
+```bash
+docker start/stop name/id of the container
+```
+
+> to remove all container 
+
+```bash
+docker rm $(docker ps -aq)
+```
+
+> to execute docker shell
+
+```bash
+docker exec -it name-of-the-container bash
+```
+
+Installation :
+
+RHEL/CentOS or Linux -> We have Docker Engine ![CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
+MacOS/Windows -> We have Docker Desktop
+
