@@ -130,3 +130,21 @@ docker run --name website -d -p 8080:80 website:latest
  Any number of containers can be created using that image
  
 Now we are going to create an API and make things a little bit complax.
+
+> A sample Dockerfile is given here assuming Dockerfile is created at same place as the project (that's why we are using ADD . .)
+
+```bash
+FROM node:latest
+WORKDIR /app
+ADD . .
+RUN npm install
+CMD node index.js
+```
+
+> We have .dockerignore file that contains items that needed to be ignored
+
+```bash
+node_modules
+Dockerfile
+.git
+```
