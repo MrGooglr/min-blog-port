@@ -60,6 +60,72 @@ docker exec -it name-of-the-container bash
 
 Installation :
 
-RHEL/CentOS or Linux -> We have Docker Engine ![CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
+RHEL/CentOS or Linux -> We have Docker Engine [download for CentOS/RHEL](https://docs.docker.com/engine/install/centos/)
+
 MacOS/Windows -> We have Docker Desktop
 
+
+> Sharing data [volume] between two containers : this will create exact replica of volumne from one container to the new one
+
+Here we are mounting volume of website container to website-copy container
+
+```bash
+docker run --name website-copy --volumes-from website -d -p 8081:80 nginx:latest
+```
+
+
+### dockerfile
+
+1. Build our own image [contains set of commands to create an image] [doc](https://docs.docker.com/engine/reference/builder/)
+
+Let's create a dockerfile and after that an image from it.
+
+#### Docker image
+
+1. image is a template for creating environment of your choice
+1. Snapshot 
+1. It has everything to run your Apps
+1. This include OS, Software, App code
+
+A sample Dockerfile example is provided below assuming you are creating it in same folder where your Static website source is available
+
+> create a file name as Dockerfile [please note there is no extension to it]
+
+Inside Dockerfile
+
+```bash
+FROM nginx:latest
+ADD . /usr/share/nginx/html
+```
+
+Explanation:
+
+1. ```FROM``` keyword is used to specify the base image which our own image will be based on. We always create an image on top of a Base img.
+1. ```ADD``` keyword is used to add everything from one directory to the specified directory. Here,  . (dot) represents current directory and it says "put everything in current directory to /usr/share/nginx/html"
+
+
+This is a very small and simple Dockerfile, from this we can create our own image
+
+To create image from Dockerfile
+
+```bash
+docker build --tag website:latest .
+```
+
+Explanation:
+
+1. docker build is used to build image from Dockerfile
+1. --tag or -t is used to provide name:tag to the image [here it is website:latest] 
+1. . (dot) is for the path of Dockerfile
+
+> you can see the images with docker image ls
+
+Now you can run a container with this image that we have created.
+
+```bash
+docker run --name website -d -p 8080:80 website:latest 
+```
+
+> go to localhost:8080 [or url:8080] to see the website up and running.
+ Any number of containers can be created using that image
+ 
