@@ -1,0 +1,46 @@
+---
+title: Introduction to Multithreading and Concurrency in Java.
+date: 2022-09-18
+slug: "/multithreading-in-java"
+tags:
+  - multithreadting
+  - threads
+  - java
+  - concurrency
+  - distributed systems
+banner: ./docker.jpg
+---
+
+## What is a process?
+
+The term process reffers to the program in execution. One CPU can run one process at a time. Process is generally heavyweight and need more resources.
+
+## Whar are Threads?
+
+The lightweight subprocesses are threads, generally multiple threads can run in parallel with one another [depends on the hardware they run on tho] to provide a multi threaded environment.
+Threads in execution get their own memory stack in which they hold their non shared variables. This "Thread stack" is only accessable by the thread it belongs too.
+To handle shared resources, the threads access the shared resource from heap memory or also called the main memeory in JVM [residing in RAM].
+
+CPUs provide multitasking/multithreading by rapidly switching between threads. This is called context-switching. Each core of the CPU can run one thread [or two if the core is using hyperthreading internally].
+This handling of threads also depends on the OS system residing over the CPU. Also, there is no gurantee on which order the Threads will be executed.
+
+To make parallellism possible and more practicle, CPUs use instruction reordering to execute instructions on parallel which are not dependent to one another.
+JVM provides this functionality after the code is compiled to ByteCode by JIT. But this instruction reordering may hinder the process of having synchronized data sets to work upon. 
+
+To achieve this, Java provides "happens before gurantee" to volatile and synchronized keywords of the language.
+
+`volatile` keyword gurantee that the variable value with which it is used will always be flushed to the main memory before any subsequent read.
+`synchronized` keyword on the other hand gurantee that the instructions written inside will be executed in the same fashion and following mutual exclusion and the updated values are always flushed before to main memory.
+This is further taken care by the monitor object that thread will take lock on.
+
+## Creating/starting and stopping threads in Java
+
+We can create Threads in Java in 4 ways : 
+- By extending from the class Thread
+- By implementing the interface Runnable [recommended because of multiple inheritance for interfaces]
+- By using anonymus instance of Runnable 
+- By using lambda function. 
+
+Although the last 2 ways are just modified way to use functional interface [Runnable is functions interface]
+
+You can start a Thread by calling `start()` method and you can stop it by calling `stop()` method. Although termination should not be done by the developer and let it be handled by the JVM itself.

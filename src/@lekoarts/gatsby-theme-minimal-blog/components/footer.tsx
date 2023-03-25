@@ -32,7 +32,7 @@ const Footer = () => {
           aria-label="Link to the GitHub repository"
           href="https://github.com/MrGooglr/min-blog-port"
         >
-            Last Edit: 25 July 2022
+            Last Edit: 25 March 2023
         </Link>
          </span>
       </div>
